@@ -1,0 +1,32 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Diviseurs</title>
+<script src="diviseurs.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+</style>
+</head>
+<body onload="Raz();">
+<h1>
+	<img class="imgintro" src="pirate-smiley.png"></img>
+	La pièce d'or hantée
+	<img class="imgintro" src="tresor.png"></img>
+</h1>
+<p>Les pirates Jabuse et Barbegrise ont trouvé un coffre au trésor. Mais une 
+légende des mers du Sud dit que celui qui prend la dernière pièce du coffre 
+sera victime de la redoutable malédiction de Latourista ! Par ailleurs, avant de 
+retirer certaines pièces du coffre, il faut pouvoir ranger les pièces ligne par 
+ligne et ne retirer qu'une ligne entière de pièces.</p>
+<h2>
+	<img class="imgintro" src="caisse.png"></img>
+	Il y a actuellement <span id="nb">47</span> pièces dans le coffre au trésor. 
+C'est au pirate <span id="player">Jabuse</span> de jouer.
+</h2>
+<p>On peut donc retirer <span id="divs">1</span> pièce(s) de ce coffre. Lequel de ces diviseurs, le joueur 
+<span id="j1">Jabuse</span> veut-il prélever parmi les <span id="nb2">47</span> ? <input value="1" id="choixDiv" type="text" onKeyUp='dessiner(nombre);'> 
+<input id="JeanPierre" value="je veux retirer 1 pièce du coffre !" onclick="jouer();" type="submit"></p>
+<div id="sou"></div>
+<p>Pour jouer une nouvelle partie, relancer le navigateur.</p>
+
+
+</body></html>

@@ -1,0 +1,25 @@
+p {
+	font-family: 'Monsieur La Doulaise', cursive;
+	font-size: 200%;
+	color: brown;
+	margin: 1em;
+	padding: 1em;
+	background-color: lightYellow;
+	border: 1px solid brown;
+	box-shadow: 0.5em 0.2em 0.4em lightgray;
+}
+h1 { 
+	color: darkRed;
+	font-family: 'Monsieur La Doulaise', cursive;
+	font-size: 400%;
+}
+#divs { color: blue; }
+#sou {
+	color: #d0a000; 
+	line-height: 50%;
+	font-size: 160%;
+} 
+.imgintro {
+	width: 4em;
+	height: auto;
+}
