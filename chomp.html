@@ -1,0 +1,77 @@
+<!doctype html>
+ 
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chomp</title>
+<style>
+    .carreau { text-align: center; max-width: 3.2em; width: 3.2em; height: 3.2em; border: 0.2em outset chocolate; background-color: Chocolate; border-radius: 50%; }
+    .moisi { text-align: center; max-width: 3.2em; width: 3.2em; height: 3.2em; border: 0.2em outset chocolate; background-color: darkSeaGreen; border-radius: 50%; }
+    .gros { color: rgba(255,255,255,0); height: 100%; vertical-align: middle; font-size: 200%; margin: 0px; }
+</style>
+ 
+ 
+</head>
+
+
+<body>
+<h1>Chomp !</h1>
+<p>Chaque joueur, quand c'est son tour, mange le biscuit au chocolat de son choix, mais doit manger avec tous les biscuits qui sont 
+en-dessous ou à droite du biscuit choisi. Le joueur qui mange le biscuit moisi en haut à gauche a perdu !</p>
+<h3>C'est au tour du joueur <span id="joueur">A</span>.</h3>
+<script>
+	autre = { "A": "B", "B": "A" };
+	joueur = "A";
+</script>
+<table>
+	<tr>
+		<td><div class="moisi" onClick="jouer();"><p class="gros">1</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">2</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">4</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">8</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">16</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">32</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">64</p></div></td>
+	</tr>
+	<tr>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">3</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">6</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">12</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">24</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">48</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">96</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">192</p></div></td>
+	</tr>
+	<tr>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">9</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">18</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">36</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">72</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">144</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">288</p></div></td>
+		<td><div class="carreau" onClick="jouer();"><p class="gros">576</p></div></td>
+	</tr>
+</table>
+<p id="sortie"></p>
+<script>
+function jouer() {
+	var j = event.target.innerHTML;
+	j = Number(j);
+	plato=document.getElementsByClassName("carreau");
+	if(j>1){
+	  for(var x=0; x<plato.length; x++) {
+		if (Number(plato[x].textContent)%j==0) {
+			plato[x].innerHTML=0;
+			plato[x].style.visibility="hidden"
+		}
+	  }
+		joueur = autre[joueur];
+		document.getElementById("joueur").innerHTML=joueur;
+	}
+}
+</script>
+
+
+</body>
+</html>
