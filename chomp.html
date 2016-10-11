@@ -26,36 +26,37 @@ en-dessous ou à droite du biscuit choisi. Le joueur qui mange le biscuit moisi 
 </script>
 <table>
 	<tr>
-		<td><div class="moisi" onClick="jouer();"><p class="gros">1</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">2</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">4</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">8</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">16</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">32</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">64</p></div></td>
+		<td><div class="moisi" onClick="jouer(event);"><p class="gros">1</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">2</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">4</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">8</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">16</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">32</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">64</p></div></td>
 	</tr>
 	<tr>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">3</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">6</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">12</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">24</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">48</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">96</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">192</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">3</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">6</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">12</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">24</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">48</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">96</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">192</p></div></td>
 	</tr>
 	<tr>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">9</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">18</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">36</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">72</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">144</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">288</p></div></td>
-		<td><div class="carreau" onClick="jouer();"><p class="gros">576</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">9</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">18</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">36</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">72</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">144</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">288</p></div></td>
+		<td><div class="carreau" onClick="jouer(event);"><p class="gros">576</p></div></td>
 	</tr>
 </table>
 <p id="sortie"></p>
 <script>
-function jouer() {
+function jouer(event) {
+	var event = window.event || event;
 	var j = event.target.innerHTML;
 	j = Number(j);
 	plato=document.getElementsByClassName("carreau");
