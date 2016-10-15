@@ -1,0 +1,50 @@
+<!doctype html>
+ 
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diviseurs</title>
+    <meta content="">
+    <style>
+		footer { text-align: right; font-style: italic; }
+		h1 { font-variant: small-caps; text-align: center; color: darkRed; }
+		h2 { color: magenta; }
+		.aide { border-bottom: 1px dashed gray; }
+    </style>
+  </head>
+  <body>
+		<h1>Des jeux sérieux sur la divisibilité</h1>
+		<h2>Chomp</h2>
+		<ol>
+			<li><h3><a href="chomp.html">Les biscuits</a></h3></li>
+			<li>Il <span class="aide" title="démonstration de John Nash">existe</span> une stratégie gagnante pour le premier joueur :
+			<ul>
+				<li>Le jeu est fini (décroissance du nombre de biscuits) donc &exist; une stratégie gagnante.</li>
+				<li>Si elle était pour le second joueur, il y aurait aussi une stratégie gagnante pour le premier joueur.</li>
+				<li>Quelle est-elle? Problème ouvert en 2016</li>
+			</ul>
+			</li>
+			<li><h3><a href="chomp2.html">Le jeu des diviseurs</a></h3></li>
+			<li>Une variante: Le jeu de Juniper Green.</li>
+		</ol>
+		<h2>Aliquotes</h2>
+		<ol>
+			<li><h3><a href="Diviseurs.html">Le jeu des pirates</a></h3></li>
+			<li>Le premier joueur à avoir un nombre pair a une stratégie gagnante.
+			<ul>
+				<li>La stratégie est bien <span class="aide" title="1 est impair">gagnante</span>.</li>
+				<li>La stratégie est <span class="aide" title="on peut toujours soustraire 1">applicable</span> systématiquement</li>
+				<li>La stratégie ne peut être volée :
+				<ul>
+					<li>Tout diviseur d'un nombre impair <span class="aide" title="la divisibilité est une relation d'ordre">est impair</span>.</li>
+					<li>La différence entre deux nombres impairs est paire.</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ol>
+		<img src="piratesQR.png" alt="lien vers la version DGPad"></img>
+	  <footer>IREM Réunion, 2016</footer>
+  </body>
+</html>
